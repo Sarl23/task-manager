@@ -32,6 +32,17 @@ export async function updateTaskCompleted(id: number, done: boolean) {
   return data[0] as Task
 }
 
+export async function updateTask(id: number, updates: { title?: string; description?: string }) {
+  const { data, error } = await supabase
+    .from('tasks')
+    .update(updates)
+    .eq('id', id)
+    .select()
+  
+  if (error) throw error
+  return data[0] as Task
+}
+
 export async function deleteTask(id: number) {
   const { error } = await supabase
     .from('tasks')
