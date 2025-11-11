@@ -77,6 +77,7 @@ export function TaskItem({
         <div style={{ paddingTop: "2px" }}>
           <Checkbox
             id={`checkbox-task-${task.id}`}
+            data-testid={`checkbox-task-${task.id}`}
             labelText=""
             checked={task.done}
             onChange={() => onToggle(Number(task.id), task.done)}

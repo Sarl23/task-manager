@@ -1,8 +1,31 @@
+#  📔 Task manager
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+<img src="./src/assets/screen.png" alt="Logo" width="800"/>
 
-First, run the development server:
+Task management web application built with Next.js, Supabase, TanStack React Query, and Carbon Design System.
+
+ ## 🚀 Features
+
+ - Create new tasks with title and description
+ - Mark tasks as completed/pending
+ - Edit existing tasks
+ - Delete tasks (with confirmation for pending tasks)
+ - Modern interface with Carbon Design System (IBM)
+ - Status management with React Query
+ - Real-time database with Supabase
+
+## 💻 Getting Started
+ ### 1. Clone the repository
+    cd task-manager
+ ### 2. Install deps
+    pnpm install
+ ### 3. Configuration envs 
+    NEXT_PUBLIC_SUPABASE_URL=tu_url_de_supabase
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_anon_key_de_supabase
+
+### 4. Run the development server:
 
 ```bash
 npm run dev
@@ -19,6 +42,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+### 5. Testing with cypress
+        pnpm dev
+
+        pnpm cypress:open
 
 ## Learn More
 

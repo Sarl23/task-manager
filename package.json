@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e": "start-server-and-test dev http://localhost:3000 cypress:open"
   },
   "dependencies": {
     "@carbon/react": "^1.95.0",
@@ -19,11 +22,14 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
+    "@cypress/react": "^9.0.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^15.6.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
+    "start-server-and-test": "^2.1.2",
     "typescript": "^5"
   }
 }
