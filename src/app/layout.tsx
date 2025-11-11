@@ -1,5 +1,6 @@
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Providers } from "./providers";
+import { Header } from "@/components/Header";
 import "./globals.css";
 
 export default function RootLayout({
@@ -11,7 +12,8 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <Providers>
-          {children}
+          <Header />
+          <main>{children}</main>
           <ReactQueryDevtools initialIsOpen={false} />
         </Providers>
       </body>
